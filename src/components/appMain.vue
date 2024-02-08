@@ -9,8 +9,11 @@ export default{
 </script>
 
 <template>
-    <h3>{{ title }}</h3>
+    <main>
+        
+    </main>
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/general.scss'
 </style>
