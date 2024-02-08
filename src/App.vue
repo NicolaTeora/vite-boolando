@@ -16,12 +16,11 @@ export default{
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
   <app-header></app-header>
   <app-main></app-main>
   <app-footer></app-footer>
 </template>
 
 <style lang="scss">
-
+@use './styles/general.scss' 
 </style>

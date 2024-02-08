@@ -12,5 +12,5 @@ export default{
     <h3>{{ title }}</h3>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>
