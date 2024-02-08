@@ -17,7 +17,7 @@ export default{
                 <li><a href="#">Bambino</a></li>
             </ul>
 
-            <h3>boolean</h3>
+            <img src="../assets/img/boolean-logo.png" alt="">
 
             <ul>
                 <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
@@ -36,6 +36,11 @@ export default{
         justify-content: space-between;
         padding: 5px;
         box-shadow: 2px 1px 2px black;
+
+        img{
+            width: 120px;
+        }
+
         ul{
             display: flex;
             
