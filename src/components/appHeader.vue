@@ -42,17 +42,9 @@ export default{
         }
 
         ul{
-            display: flex;
-            
-            li{
-                margin: 5px;
-                list-style: none;
-                a{
-                    text-decoration: none;
-                    color: white;
-                    font-weight: bold;
-                }
-            }
+            a{
+                font-weight: bold;
+            }             
         }
     }
 

@@ -16,11 +16,14 @@ export default{
 </script>
 
 <template>
-  <app-header></app-header>
-  <app-main></app-main>
-  <app-footer></app-footer>
+  <div >
+    <app-header></app-header>
+    <app-main></app-main>
+    <app-footer></app-footer>
+  </div>
 </template>
 
 <style lang="scss">
-@use './styles/general.scss' 
+@use './styles/general.scss' as *;
+
 </style>

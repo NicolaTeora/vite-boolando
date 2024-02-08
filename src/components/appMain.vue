@@ -28,7 +28,10 @@ export default{
                     image: '6.webp',
                     imageHover: '6b.webp'
                 },
-            ]
+            ],
+
+            //display: true,
+            activeElement: 0,
         }
     },
 
@@ -40,8 +43,8 @@ export default{
             return new URL('../assets/img/' + imgName, import.meta.url).href;
         },
 
-        LookNextImg(){
-            console.log('mouse passato')
+        LookNextImg(i){
+            console.log('mouseOver', i, );
         }
     }
 }
@@ -49,9 +52,9 @@ export default{
 
 <template>
     <main>
-        <div v-for="image of images">
-            <img class="frist-img" :src="FrontImage(image.image)" @mouseover="LookNextImg()" alt="" >
-            <!-- <img class="hover-img" :src="HoverImage(image.imageHover)" alt="" > -->
+        <div v-for="(image, index) of images"  @mouseover="LookNextImg(index)">
+            <img class="frist-img" :src="FrontImage(image.image)" alt="" >
+            <img class="hover-img" :src="HoverImage(image.imageHover)" v-show="false" alt="" >
         </div>
     </main>
 </template>
@@ -65,13 +68,13 @@ main{
     justify-content: center;
     
     div{
-        margin: 20px auto;
-        width: calc(100% / 3);
+        margin: 10px 10px;
+        width: calc(100% / 3 - 20px);
         text-align: center;
 
         img{
-            width: 200px;
+            width: 100%;
         }
-    }
+    }    
 }
 </style>
