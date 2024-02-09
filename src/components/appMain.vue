@@ -51,7 +51,7 @@ export default{
 </script>
 
 <template>
-    <main>
+    <main class="container">
         <div v-for="(image, index) of images"  @mouseover="LookNextImg(index)">
             <img class="frist-img" :src="FrontImage(image.image)" alt="" >
             <img class="hover-img" :src="HoverImage(image.imageHover)" v-show="false" alt="" >

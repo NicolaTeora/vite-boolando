@@ -2,7 +2,17 @@
 export default{
   data(){
     return{
-      title: 'header'
+      links: [
+        { url: '#', name: 'Uomo' },
+        { url: '#', name: 'Donna' },
+        { url: '#', name: 'Bambino' },
+      ],
+
+      options: [
+      { url: '#', name: 'fa-solid fa-user' },
+      { url: '#', name: 'fa-regular fa-heart' },
+      { url: '#', name: 'fa-solid fa-bag-shopping' },
+      ]
     }
   }
 }
@@ -10,19 +20,15 @@ export default{
 
 <template>
     <header>
-        <nav>
+        <nav class="container">
             <ul>
-                <li><a href="#">Uomo</a></li>
-                <li><a href="#">Donna</a></li>
-                <li><a href="#">Bambino</a></li>
+                <li v-for="link of links"><a :href="link.url">{{ link.name }}</a></li>
             </ul>
 
             <img src="../assets/img/boolean-logo.png" alt="">
 
             <ul>
-                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li v-for="option of options"><a :href="option.url"><i :class="option.name"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -35,8 +41,7 @@ export default{
         display: flex;
         justify-content: space-between;
         padding: 5px;
-        box-shadow: 2px 1px 2px black;
-
+        
         img{
             width: 120px;
         }
