@@ -21,11 +21,11 @@ export default{
         <div>
             <p>Trovaci anche su</p>
             <ul>
-                <li><a href="#"><i class="fa-brands fa-square-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-square-pinterest"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-square-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-twitter fa-2xl"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-facebook fa-2xl"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-instagram fa-2xl"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-pinterest fa-2xl"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-youtube fa-2xl"></i></a></li>
             </ul>
         </div>
     </footer>
@@ -36,6 +36,9 @@ export default{
 
     footer{
         padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        
         ul{
             font-size: smaller;
         }

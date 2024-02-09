@@ -66,9 +66,10 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 5px;
     
     div{
-        margin: 10px 10px;
+        margin: 10px 0;
         width: calc(100% / 3 - 20px);
         text-align: center;
 
