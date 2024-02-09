@@ -15,7 +15,7 @@ ul{
     display: flex;
     
     li{
-        margin: 5px;
+        margin: 10px 10px 0px 0px;
         list-style: none;
         a{
             text-decoration: none;
@@ -25,12 +25,14 @@ ul{
 }
 
 header{
+    padding: 15px 0;
     background-color: $background-header;
     color: $color-header-footer;
     box-shadow: 2px 1px 2px black;
 }
 
 footer{
+    padding: 15px 0;
     background-color: $background-footer;
     color: $color-header-footer;
 }
