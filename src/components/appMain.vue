@@ -42,10 +42,6 @@ export default{
         HoverImage(imgName){
             return new URL('../assets/img/' + imgName, import.meta.url).href;
         },
-
-        LookNextImg(i){
-            console.log('mouseOver', i, );
-        }
     }
 }
 </script>
