@@ -1,40 +1,120 @@
 <script>
+import appCard from './appCard.vue';
+
 export default{
     data(){
         return{
-            logo: '',
-            images: [
-                {
-                    image: '1.webp',
-                    imageHover: '1b.webp'
-                },
-                {
-                    image: '2.webp',
-                    imageHover: '2b.webp'
-                },
-                {
-                    image: '3.webp',
-                    imageHover: '3b.webp'
-                },
-                {
-                    image: '4.webp',
-                    imageHover: '4b.webp'
-                },
-                {
-                    image: '5.webp',
-                    imageHover: '5b.webp'
-                },
-                {
-                    image: '6.webp',
-                    imageHover: '6b.webp'
-                },
-            ],
 
-            //display: true,
-            activeElement: 0,
-        }
+            products: [
+                {
+                    id: 1,
+                    frontImage: '1.webp',
+                    backImage: '1b.webp',
+                    brand: "Levi's",
+                    name: 'Relaxed Fit',
+                    price: 29.99,
+                    isInFavorites: true,
+                    badges: [
+                        {
+                        type: 'tag',
+                        value: 'Sostenibilità',
+                        },
+                        {
+                        type: 'discount',
+                        value: '-50%',
+                        },
+                    ],
+                },
+                {
+                    id: 2,
+                    frontImage: '2.webp',
+                    backImage: '2b.webp',
+                    brand: 'Guess',
+                    name: 'Roses Tee',
+                    price: 20.99,
+                    isInFavorites: true,
+                    badges: [
+                        {
+                        type: 'discount',
+                        value: '-30%',
+                        },
+                    ],
+                },
+                {
+                    id: 3,
+                    frontImage: '3.webp',
+                    backImage: '3b.webp',
+                    brand: 'Come Zucchero Filato',
+                    name: 'Voglia di colori pastello',
+                    price: 129.99,
+                    isInFavorites: false,
+                    badges: [
+                        {
+                        type: 'discount',
+                        value: '-30%',
+                        },
+                    ],
+                },
+                {
+                    id: 4,
+                    frontImage: '4.webp',
+                    backImage: '4b.webp',
+                    brand: "Levi's",
+                    name: 'Tee Unisex',
+                    price: 14.99,
+                    isInFavorites: false,
+                    badges: [
+                        {
+                        type: 'tag',
+                        value: 'Sostenibilità',
+                        },
+                        {
+                        type: 'discount',
+                        value: '-50%',
+                        },
+                    ],
+                },
+                {
+                    id: 5,
+                    frontImage: '5.webp',
+                    backImage: '5b.webp',
+                    brand: 'Maya Deluxe',
+                    name: 'Stripe Bodice',
+                    price: 99.99,
+                    isInFavorites: true,
+                    badges: [
+                        {
+                        type: 'tag',
+                        value: 'Sostenibilità',
+                        },
+                        {
+                        type: 'discount',
+                        value: '-50%',
+                        },
+                    ],
+                },
+                {
+                    id: 6,
+                    frontImage: '6.webp',
+                    backImage: '6b.webp',
+                    brand: 'Esprit',
+                    name: 'Maglione - Black',
+                    price: 29.99,
+                    isInFavorites: true,
+                    badges: [
+                        {
+                        type: 'tag',
+                        value: 'Sostenibilità',
+                        },
+                    ],
+                },
+            ],    
+        };
+
     },
-
+    
+    components: { appCard },
+    
     methods: {
         FrontImage(imgName){
             return new URL('../assets/img/' + imgName, import.meta.url).href;
@@ -48,10 +128,11 @@ export default{
 
 <template>
     <main class="container">
-        <div v-for="(image, index) of images"  @mouseover="LookNextImg(index)">
+        <app-card />
+        <!-- <div v-for="(image, index) of images"  @mouseover="LookNextImg(index)">
             <img class="frist-img" :src="FrontImage(image.image)" alt="" >
             <img class="hover-img" :src="HoverImage(image.imageHover)" v-show="false" alt="" >
-        </div>
+        </div> -->
     </main>
 </template>
 
@@ -62,16 +143,6 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
-    
-    div{
-        margin: 10px 0;
-        width: calc(100% / 3 - 20px);
-        text-align: center;
-
-        img{
-            width: 100%;
-        }
-    }    
+    gap: 5px;   
 }
 </style>
