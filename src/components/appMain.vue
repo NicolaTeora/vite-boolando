@@ -128,9 +128,9 @@ export default{
 
 <template>
     <main class="container">
-        <app-card 
+        <app-card         
         v-for="product of products"
-        :img="FrontImage(product.frontImage)"
+        :img="product.frontImage"
         :brand="product.brand"
         :name="product.name"
         :price="product.price"

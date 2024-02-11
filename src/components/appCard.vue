@@ -3,7 +3,7 @@ export default{
     
     props:{
         id: Number,
-        frontImage: Function,
+        frontImage: String,
         backImage: String,
         brand: String,
         name: String,
@@ -23,7 +23,7 @@ export default{
 
 <template>
     <figure>
-        <img :src="frontImage" :alt="brand">        
+        <img :src="FrontImage(frontImage)" :alt="brand">        
         <figcaption>
             <span class="brand">{{brand}}</span>
             <span class="name">{{name}}</span>
