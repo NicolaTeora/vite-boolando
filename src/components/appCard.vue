@@ -3,7 +3,7 @@ export default{
     
     props:{
         id: Number,
-        frontImage: String,
+        frontImage: Function,
         backImage: String,
         brand: String,
         name: String,
@@ -23,13 +23,13 @@ export default{
 
 <template>
     <figure>
-        <img src="../assets/img/1.webp" alt="">        
+        <img :src="frontImage" :alt="brand">        
         <figcaption>
-            <span class="brand">brand</span>
-            <span class="name">name</span>
+            <span class="brand">{{brand}}</span>
+            <span class="name">{{name}}</span>
             <div>
-                <span class="price">999</span>
-                <span class="price-discount">888</span>
+                <span class="price">{{ price }}</span>
+                <span class="price-discount">{{ price }}</span>
             </div>
         </figcaption>
     </figure>

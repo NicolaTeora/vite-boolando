@@ -128,7 +128,13 @@ export default{
 
 <template>
     <main class="container">
-        <app-card />
+        <app-card 
+        v-for="product of products"
+        :img="FrontImage(product.frontImage)"
+        :brand="product.brand"
+        :name="product.name"
+        :price="product.price"
+        />
         <!-- <div v-for="(image, index) of images"  @mouseover="LookNextImg(index)">
             <img class="frist-img" :src="FrontImage(image.image)" alt="" >
             <img class="hover-img" :src="HoverImage(image.imageHover)" v-show="false" alt="" >
