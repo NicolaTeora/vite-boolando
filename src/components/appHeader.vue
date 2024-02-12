@@ -2,17 +2,27 @@
 export default{
   data(){
     return{
-      links: [
+    /*
+    links: [
         { url: '#', name: 'Uomo' },
         { url: '#', name: 'Donna' },
         { url: '#', name: 'Bambino' },
-      ],
+    ],
+    
+    options: [
+        { url: '#', name: 'fa-solid fa-user' },
+        { url: '#', name: 'fa-regular fa-heart' },
+        { url: '#', name: 'fa-solid fa-bag-shopping' },
+    ]
+    */
+    
+    props:{
+        links: Array,
+        options: Array,
+        url: String,
+        name: String,
+    }
 
-      options: [
-      { url: '#', name: 'fa-solid fa-user' },
-      { url: '#', name: 'fa-regular fa-heart' },
-      { url: '#', name: 'fa-solid fa-bag-shopping' },
-      ]
     }
   }
 }
@@ -25,7 +35,7 @@ export default{
                 <li v-for="link of links"><a :href="link.url">{{ link.name }}</a></li>
             </ul>
 
-            <img src="../assets/img/boolean-logo.png" alt="">
+            <img src="../../public/img/boolean-logo.png" alt="">
 
             <ul>
                 <li v-for="option of options"><a :href="option.url"><i :class="option.name"></i></a></li>

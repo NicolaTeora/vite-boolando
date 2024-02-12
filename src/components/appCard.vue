@@ -11,19 +11,13 @@ export default{
         isInFavorites: Boolean,
         badges: Array,
     },
-
-    methods:{
-        FrontImage(imgName){
-            return new URL('../assets/img/' + imgName, import.meta.url).href;
-        },
-    }
 }
 
 </script>
 
 <template>
     <figure>
-        <img :src="FrontImage(frontImage)" :alt="brand">        
+        <img :src="frontImage" :alt="brand" />        
         <figcaption>
             <span class="brand">{{brand}}</span>
             <span class="name">{{name}}</span>
