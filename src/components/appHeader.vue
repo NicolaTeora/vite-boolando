@@ -1,12 +1,7 @@
 <script>
 import {store} from '../store/index'
 export default{
-  data(){
-    return{
-        store,
-    }
-    },
-    
+
     props:{
         links: Array,
         options: Array,

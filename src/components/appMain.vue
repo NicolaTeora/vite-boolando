@@ -4,7 +4,7 @@ import appCard from './appCard.vue';
 export default{
     data(){
         return{
-
+            /*
             products: [
                 {
                     id: 1,
@@ -108,10 +108,11 @@ export default{
                         },
                     ],
                 },
-            ],    
+            ],
+            */    
         };
-
     },
+    props:{ products: Array },
     
     components: { appCard },
     

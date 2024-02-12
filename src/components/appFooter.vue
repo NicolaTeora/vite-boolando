@@ -1,55 +1,7 @@
 <script>
 export default{
     data(){
-        return{/*
-            linksSite: [
-                {
-                    title: 'Boolando s.r.l.',
-                    links: [ 
-                        { 
-                        name: 'Informazioni Legali', 
-                        url: '#', 
-                        },
-                        {
-                            name: 'Informativa sulla pricacy',
-                            url: '#',
-                        },
-                        {
-                            name: 'Diritto di recesso',
-                            url: '#'
-                        }
-                    ]
-                },
-                {
-                    title: 'Trovaci anche su:',
-                    // TODO: passare le icone fontawesome 
-                    links: [
-                        {
-                            name: 'X',
-                            url: '#'
-                        },
-                        {
-                            name: 'F',
-                            url: '#'
-                        },
-                        {
-                            name: 'I',
-                            url: '#'
-                        },
-                        {
-                            name: 'P',
-                            url: '#'
-                        },
-                        {
-                            name: 'Y',
-                            url: '#'
-                        }
-                    ]
-                }
-
-            ],
-                */
-        }
+        return{}
     },
 
     props:{
