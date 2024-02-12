@@ -15,16 +15,13 @@ export default{
         { url: '#', name: 'fa-solid fa-bag-shopping' },
     ]
     */
+    }
+    },
     
     props:{
         links: Array,
         options: Array,
-        url: String,
-        name: String,
     }
-
-    }
-  }
 }
 </script>
 
