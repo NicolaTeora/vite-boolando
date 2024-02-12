@@ -1,7 +1,7 @@
 <script>
 export default{
     data(){
-        return{
+        return{/*
             linksSite: [
                 {
                     title: 'Boolando s.r.l.',
@@ -48,8 +48,13 @@ export default{
                 }
 
             ],
-                
+                */
         }
+    },
+
+    props:{
+        linksSite: Array,
+        links: Array,
     }
 }
 </script>
