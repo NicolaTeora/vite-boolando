@@ -1,20 +1,9 @@
 <script>
+import {store} from '../store/index'
 export default{
   data(){
     return{
-    /*
-    links: [
-        { url: '#', name: 'Uomo' },
-        { url: '#', name: 'Donna' },
-        { url: '#', name: 'Bambino' },
-    ],
-    
-    options: [
-        { url: '#', name: 'fa-solid fa-user' },
-        { url: '#', name: 'fa-regular fa-heart' },
-        { url: '#', name: 'fa-solid fa-bag-shopping' },
-    ]
-    */
+        store,
     }
     },
     

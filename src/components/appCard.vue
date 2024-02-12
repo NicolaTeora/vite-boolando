@@ -46,7 +46,7 @@ export default{
             height: 25px;
             position: absolute;
             font-size:larger;
-            top: 0;
+            top: 10px;
             right: 0;
             background-color: whitesmoke;
             text-align: center;
