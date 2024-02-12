@@ -1,4 +1,7 @@
 <script>
+import {store} from './store'
+import axios from 'axios'
+
 import appHeader from './components/appHeader.vue'
 import appMain from './components/appMain.vue'
 import appFooter from './components/appFooter.vue'
@@ -19,7 +22,9 @@ export default{
       ],
 
       //data appMain
-      products: [
+      products:[],
+
+      /*products: [
         {
         id: 1,
         frontImage: '1.webp',
@@ -123,7 +128,9 @@ export default{
         ],
         },
       ],      
-      
+      */
+
+
       //data appFooter
       linksSite: [
         {
@@ -151,7 +158,13 @@ export default{
     }
   },
 
-  components:{ appHeader, appMain, appFooter }
+  components:{ appHeader, appMain, appFooter },
+
+  created(){
+    axios.get('http://localhost:3000/products').then((res)=>{
+      this.products = res.data
+    })
+  }
 }
 
 </script>
