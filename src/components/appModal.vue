@@ -6,6 +6,12 @@ export default{
     },
     props:{  },
 
+    methods:{
+        closeModal(){
+            store.modal.show = false
+        }
+    }
+
 }
 </script>
 
@@ -24,7 +30,7 @@ export default{
                     <li>discount</li>
                 </ul>
                 
-                <button>Close</button>
+                <button @click="closeModal()">Close</button>
             
             </div>
             
