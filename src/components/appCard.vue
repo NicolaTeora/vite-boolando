@@ -2,7 +2,7 @@
 export default{
 
     data(){
-        return{ displayImg: true }
+        return{ }
         },
     
     props:{
@@ -19,9 +19,7 @@ export default{
     emits:['open-details'],
 
     methods:{
-        invertStatus(){
-            this.displayImg = false;
-        }
+        invertStatus(){}
     }
 
 }
@@ -29,11 +27,11 @@ export default{
 </script>
 
 <template>
-    <figure @click="$emit('open-details')">
-        <img class="frist-img" :src="frontImage" :alt="brand" v-show="displayImg=true" />
-        <img class="second-img" :src="backImage" :alt="brand" v-show="displayImg=false">
+    <figure @click="$emit('open-details', this.id)">
+        <img class="frist-img" :src="frontImage" :alt="brand"/>
+        <img class="second-img" :src="backImage" :alt="brand" v-show="false" >
         <div class="heart">&hearts;</div>
-        <div class="label"></div>        
+        <div class="label" >label</div>        
         <figcaption>
             <span class="brand">{{brand}}</span>
             <span class="name">{{name}}</span>
@@ -68,6 +66,13 @@ export default{
             right: 0;
             background-color: whitesmoke;
             text-align: center;
+        }
+        .label{
+            padding: 5px;
+            position: absolute;
+            background-color: whitesmoke;
+            left: 0;
+            bottom: 25%;
         }
 
         figcaption{

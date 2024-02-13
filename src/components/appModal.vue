@@ -1,14 +1,17 @@
 <script>
-import {store} from '../store'
+import {store} from '../store';
 export default{
     data(){
         return {store}
     },
-    props:{  },
+    props:{
+        products: Array,
+    },
 
     methods:{
         closeModal(){
-            store.modal.show = false
+            store.modal.show = false;
+
         }
     }
 
@@ -18,16 +21,17 @@ export default{
 <template>
     <div class="overlay">
         <div class="card-details">
-            <img src="../../public/img/1.webp" alt="">
-            <img src="../../public/img/1b.webp" alt="">
+    
+            <img :src="store.modal.frontImage" alt="">
+            <img :src="store.modal.backImage" alt="">
 
             <div class="product-details">
-                <h3>brand</h3>
+                <h3>{{ store.modal.brand }}</h3>
                 <ul>
-                    <li>nome</li>
-                    <li>prezzo</li>
-                    <li>sostenibilità</li>
-                    <li>discount</li>
+                    <li>{{store.modal.name}}</li>
+                    <li>{{store.modal.price}}</li>
+                    <li></li>
+                    <li></li>
                 </ul>
                 
                 <button @click="closeModal()">Close</button>

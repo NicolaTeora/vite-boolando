@@ -1,6 +1,6 @@
 <script>
 import appCard from './appCard.vue';
-import {store} from '../store'
+import {store} from '../store';
 
 export default{
 
@@ -17,8 +17,20 @@ export default{
             //return new URL('../assets/img/' + imgName, import.meta.url).href;
             return './img/' + imgName;
         },
-        openDetailsProduct(){
+        openDetailsProduct(numId){
+            const productId = this.products[numId]
+            store.modal.name = productId.name
+            store.modal.brand = productId.brand
+            store.modal.frontImage = this.FrontImage(productId.frontImage)
+            store.modal.backImage = this.HoverImage(productId.backImage)
+            store.modal.price = productId.price
+
+
+            console.log(productId.price)
+
+
             store.modal.show= true;
+            
         }
     }
 }
@@ -27,8 +39,9 @@ export default{
 <template>
     <main class="container">
         <app-card         
-        v-for="product of products"
+        v-for="(product, id) of products"
         @open-details="openDetailsProduct"
+        :id="id"
         :frontImage="FrontImage(product.frontImage)"
         :backImage="HoverImage(product.backImage)"
         :brand="product.brand"
@@ -44,7 +57,7 @@ export default{
 main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 5px;   
 }
 </style>
