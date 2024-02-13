@@ -68,7 +68,7 @@ export default{
 <template>
 
   <app-header :links="links" :options="options"></app-header>
-  <app-modal></app-modal>
+  <app-modal v-if="store.modal.show" :products="products"></app-modal>
   <app-main :products="products"></app-main>
   <app-footer :linksSite="linksSite"></app-footer>
 

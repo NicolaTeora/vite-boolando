@@ -1,10 +1,32 @@
 <script>
-export default{}
+import {store} from '../store'
+export default{
+    data(){
+        return {store}
+    },
+    props:{  },
+
+}
 </script>
 
 <template>
     <div class="overlay">
         <div class="card-details">
+            <img src="../../public/img/1.webp" alt="">
+            <img src="../../public/img/1b.webp" alt="">
+
+            <div class="product-details">
+                <h3>brand</h3>
+                <ul>
+                    <li>nome</li>
+                    <li>prezzo</li>
+                    <li>sostenibilità</li>
+                    <li>discount</li>
+                </ul>
+                
+                <button>Close</button>
+            
+            </div>
             
         </div>
     </div>
@@ -14,7 +36,6 @@ export default{}
     .overlay{
         
         position: fixed;
-        //display: block;
         width: 100%; 
         height: 100%; 
         top: 0;
@@ -24,15 +45,34 @@ export default{}
 
         background-color: rgba(0,0,0,0.5);
         z-index: 2;
+        color: black;
         
         display: flex;
         justify-content: center;
         align-items: center;
         
         .card-details{
-            width: 100px;
-            height: 100px;
+            width: 70%;            
+            padding: 20px;
+            display: flex;
+            gap: 10px;
             background-color: whitesmoke;
+            
+            img{
+                width: 35%;
+            }
+            .product-details{
+                position: relative;
+
+                ul{
+                    display: block;
+                }
+                button{
+                    position: absolute;
+                    bottom: 0;
+                    padding: 5px 8px;
+                }
+            }
         } 
     }
     

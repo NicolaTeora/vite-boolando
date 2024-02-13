@@ -1,5 +1,9 @@
 <script>
 export default{
+
+    data(){
+        return{ displayImg: true }
+        },
     
     props:{
         id: Number,
@@ -11,14 +15,21 @@ export default{
         isInFavorites: Boolean,
         badges: Array,
     },
+
+    methods:{
+        invertStatus(){
+            this.displayImg = false;
+        }
+    }
+
 }
 
 </script>
 
 <template>
     <figure>
-        <img class="frist-img" :src="frontImage" :alt="brand" />
-        <!-- <img class="second-img" :src="backImage" :alt="brand"> -->
+        <img class="frist-img" :src="frontImage" :alt="brand" v-show="displayImg=true" />
+        <img class="second-img" :src="backImage" :alt="brand" v-show="displayImg=false">
         <div class="heart">&hearts;</div>        
         <figcaption>
             <span class="brand">{{brand}}</span>
