@@ -10,6 +10,7 @@ import appModal from './components/appModal.vue';
 export default{
   data(){
     return{
+      store,
       //data appHeader
       links: [
         { url: '#', name: 'Uomo' },
@@ -52,7 +53,7 @@ export default{
     }
   },
 
-  components:{ appHeader, appMain, appFooter },
+  components:{ appHeader, appMain, appFooter, appModal },
 
   created(){
     //passo tramite Global State l'endpoint
@@ -67,6 +68,7 @@ export default{
 <template>
 
   <app-header :links="links" :options="options"></app-header>
+  <app-modal></app-modal>
   <app-main :products="products"></app-main>
   <app-footer :linksSite="linksSite"></app-footer>
 
