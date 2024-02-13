@@ -5,7 +5,7 @@ export const store = reactive({
   apiUri: "http://localhost:3000",
 
   modal: {
-    show: true,
+    show: false,
   },
 });
 

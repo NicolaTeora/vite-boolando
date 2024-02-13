@@ -1,5 +1,6 @@
 <script>
 import appCard from './appCard.vue';
+import {store} from '../store'
 
 export default{
 
@@ -16,6 +17,9 @@ export default{
             //return new URL('../assets/img/' + imgName, import.meta.url).href;
             return './img/' + imgName;
         },
+        openDetailsProduct(){
+            store.modal.show= true;
+        }
     }
 }
 </script>
@@ -24,6 +28,7 @@ export default{
     <main class="container">
         <app-card         
         v-for="product of products"
+        @open-details="openDetailsProduct"
         :frontImage="FrontImage(product.frontImage)"
         :backImage="HoverImage(product.backImage)"
         :brand="product.brand"

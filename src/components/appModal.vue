@@ -39,6 +39,8 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/general.scss' as *; 
+@use '../styles/partials/variables' as *;
     .overlay{
         
         position: fixed;
@@ -74,6 +76,8 @@ export default{
                     display: block;
                 }
                 button{
+                    background-color: $background-footer;
+                    color: $color-header-footer;
                     position: absolute;
                     bottom: 0;
                     padding: 5px 8px;

@@ -16,6 +16,8 @@ export default{
         badges: Array,
     },
 
+    emits:['open-details'],
+
     methods:{
         invertStatus(){
             this.displayImg = false;
@@ -27,10 +29,11 @@ export default{
 </script>
 
 <template>
-    <figure>
+    <figure @click="$emit('open-details')">
         <img class="frist-img" :src="frontImage" :alt="brand" v-show="displayImg=true" />
         <img class="second-img" :src="backImage" :alt="brand" v-show="displayImg=false">
-        <div class="heart">&hearts;</div>        
+        <div class="heart">&hearts;</div>
+        <div class="label"></div>        
         <figcaption>
             <span class="brand">{{brand}}</span>
             <span class="name">{{name}}</span>
