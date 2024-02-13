@@ -25,10 +25,6 @@ export default{
             store.modal.backImage = this.HoverImage(productId.backImage)
             store.modal.price = productId.price
 
-
-            console.log(productId.price)
-
-
             store.modal.show= true;
             
         }
@@ -47,6 +43,7 @@ export default{
         :brand="product.brand"
         :name="product.name"
         :price="product.price"
+        :badges="product.badges"
         />
     </main>
 </template>

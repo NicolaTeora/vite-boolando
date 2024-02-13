@@ -2,7 +2,9 @@
 export default{
 
     data(){
-        return{ }
+        return{ 
+            upHere: false
+        }
         },
     
     props:{
@@ -14,12 +16,15 @@ export default{
         price: Number,
         isInFavorites: Boolean,
         badges: Array,
+
     },
 
     emits:['open-details'],
 
     methods:{
-        invertStatus(){}
+        priceDiscount(){
+
+        }
     }
 
 }
@@ -27,11 +32,13 @@ export default{
 </script>
 
 <template>
-    <figure @click="$emit('open-details', this.id)">
-        <img class="frist-img" :src="frontImage" :alt="brand"/>
-        <img class="second-img" :src="backImage" :alt="brand" v-show="false" >
+    <figure @click="$emit('open-details', this.id)" >
+        <img class="frist-img" :src="frontImage" :alt="brand" />
+        <!-- <img class="second-img" :src="backImage" :alt="brand"  > -->
         <div class="heart">&hearts;</div>
-        <div class="label" >label</div>        
+        <div class="sostenibilita">
+            
+        </div>
         <figcaption>
             <span class="brand">{{brand}}</span>
             <span class="name">{{name}}</span>
@@ -67,10 +74,10 @@ export default{
             background-color: whitesmoke;
             text-align: center;
         }
-        .label{
+        .sostenibilita{
             padding: 5px;
             position: absolute;
-            background-color: whitesmoke;
+            background-color: rgb(25, 199, 77);
             left: 0;
             bottom: 25%;
         }
