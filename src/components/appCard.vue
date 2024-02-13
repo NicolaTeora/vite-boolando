@@ -17,7 +17,8 @@ export default{
 
 <template>
     <figure>
-        <img :src="frontImage" :alt="brand" />
+        <img class="frist-img" :src="frontImage" :alt="brand" />
+        <!-- <img class="second-img" :src="backImage" :alt="brand"> -->
         <div class="heart">&hearts;</div>        
         <figcaption>
             <span class="brand">{{brand}}</span>
@@ -40,13 +41,16 @@ export default{
         img{
         width: 100%;
         }
+        
+    } 
 
         .heart{
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
+
             position: absolute;
             font-size:larger;
-            top: 10px;
+            top: 20px;
             right: 0;
             background-color: whitesmoke;
             text-align: center;
@@ -81,5 +85,5 @@ export default{
             }
         }
         
-    } 
+ 
 </style>

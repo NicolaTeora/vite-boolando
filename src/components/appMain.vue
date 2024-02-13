@@ -25,6 +25,7 @@ export default{
         <app-card         
         v-for="product of products"
         :frontImage="FrontImage(product.frontImage)"
+        :backImage="HoverImage(product.backImage)"
         :brand="product.brand"
         :name="product.name"
         :price="product.price"

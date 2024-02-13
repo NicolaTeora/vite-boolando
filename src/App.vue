@@ -1,10 +1,11 @@
 <script>
-import {store} from './store'
-import axios from 'axios'
+import {store} from './store';
+import axios from 'axios';
 
-import appHeader from './components/appHeader.vue'
-import appMain from './components/appMain.vue'
-import appFooter from './components/appFooter.vue'
+import appHeader from './components/appHeader.vue';
+import appMain from './components/appMain.vue';
+import appFooter from './components/appFooter.vue';
+import appModal from './components/appModal.vue';
 
 export default{
   data(){

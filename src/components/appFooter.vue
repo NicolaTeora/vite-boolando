@@ -19,7 +19,9 @@ export default{
             <div v-for="link of linksSite">
                 <h4>{{ link.title }}</h4>
                 <ul>
-                    <li v-for="option of link.links"><a :href="option.url">{{option.name}}</a></li>
+                    <li v-for="option of link.links">
+                        <a :href="option.url">{{option.name}}</a>
+                    </li>
                 </ul>
             </div>
             
